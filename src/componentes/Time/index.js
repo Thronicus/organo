@@ -7,6 +7,7 @@ const Time = (props) => {
   };
 
   return (
+    //Alternativamente pode usar: props.colaboradores.length > 0 ? () : ()
     props.colaboradores.length > 0 && (
       <section className="time" style={{ backgroundColor: props.corPrimaria }}>
         <h3 style={inlineStyles}>{props.time}</h3>
@@ -23,24 +24,6 @@ const Time = (props) => {
         </div>
       </section>
     )
-    /*
-    props.colaboradores.lenght > 0 ? (
-      <section className="time" style={{ backgroundColor: props.corPrimaria }}>
-        <h3 style={{ borderColor: props.corSecundaria }}>{props.time}</h3>
-        <div className="cards">
-          {props.colaboradores.map((colaborador) => (
-            <Colaborador
-              imagem={colaborador.imagem}
-              nome={colaborador.nome}
-              cargo={colaborador.cargo}
-            />
-          ))}
-        </div>
-      </section>
-    ) : (
-      ""
-    );
-    */
   );
 };
 
