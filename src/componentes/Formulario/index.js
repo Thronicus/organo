@@ -9,7 +9,6 @@ const Formulario = (props) => {
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
   const [time, setTime] = useState("");
-  const [count, setCount] = useState(0);
 
   const aoSalvar = (evento) => {
     evento.preventDefault();
@@ -19,11 +18,10 @@ const Formulario = (props) => {
       imagem,
       time,
     });
-    setNome("Alex" + count);
-    setCargo("CEO");
-    setImagem("https://github.com/Tabibito-san.png");
-    setTime("Programação");
-    setCount(count + 1);
+    setNome("");
+    setCargo("");
+    setImagem("");
+    setTime("");
   };
 
   return (
