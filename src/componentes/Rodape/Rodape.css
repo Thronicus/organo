@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 80px;
+
+  color: #fff;
+  background-color: #6278f7;
+
+  background-image: url(/public/imagens/fundo.png);
+}
+.footer li {
+  display: flex;
+  gap: 32px;
+}
+
+.footer p a {
+  color: #ffffff;
+}
