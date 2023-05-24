@@ -1,0 +1,24 @@
+.campo-texto {
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0;
+}
+
+.campo-texto label {
+  margin-bottom: 8px;
+
+  font-size: 24px;
+}
+
+.campo-texto input {
+  box-sizing: border-box;
+  width: 100%;
+
+  padding: 24px;
+
+  font-size: 24px;
+  background-color: #ffffff;
+
+  border: none;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+}
