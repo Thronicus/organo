@@ -4,7 +4,7 @@ import ListaSuspensa from "../ListaSuspensa";
 import Botao from "../Botao";
 import "./Formulario.css";
 
-const Formulario = (props) => {
+const Formulario = ({ times, cadastrarColaborador }) => {
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
@@ -12,7 +12,7 @@ const Formulario = (props) => {
 
   const aoSalvar = (evento) => {
     evento.preventDefault();
-    props.cadastrarColaborador({
+    cadastrarColaborador({
       nome,
       cargo,
       imagem,
@@ -51,7 +51,7 @@ const Formulario = (props) => {
         <ListaSuspensa
           required={true}
           label="Times"
-          itens={props.times}
+          itens={times}
           valor={time}
           aoAlterar={(valor) => setTime(valor)}
         />
