@@ -1,24 +1,32 @@
+import hexToRgba from "hex-to-rgba";
+
 import Colaborador from "../Colaborador";
 import "./Time.css";
 
-const Time = (props) => {
+const Time = ({ time, colaboradores, aoDeletar, aoFavoritar, mudarCor }) => {
   const inlineStyles = {
-    "--border-color": props.corSecundaria,
+    "--border-color": time.cor,
   };
 
   return (
-    //Alternativamente pode usar: props.colaboradores.length > 0 ? () : ()
-    props.colaboradores.length > 0 && (
-      <section className="time" style={{ backgroundColor: props.corPrimaria }}>
-        <h3 style={inlineStyles}>{props.time}</h3>
+    //Alternativamente pode usar: colaboradores.length > 0 ? () : ()
+    colaboradores.length > 0 && (
+      <section className="time" style={{ backgroundColor: time.corSecundaria }}>
+        <input
+          onChange={(evento) => mudarCor(evento.target.value, time.id)}
+          className="input-color"
+          value={time.cor}
+          type="color"
+        />
+        <h3 style={inlineStyles}>{time.nome}</h3>
         <div className="cards">
-          {props.colaboradores.map((colaborador) => (
+          {colaboradores.map((colaborador) => (
             <Colaborador
               key={colaborador.nome}
-              corDeFundo={props.corSecundaria}
-              imagem={colaborador.imagem}
-              nome={colaborador.nome}
-              cargo={colaborador.cargo}
+              time={time}
+              colaborador={colaborador}
+              aoDeletar={aoDeletar}
+              aoFavoritar={aoFavoritar}
             />
           ))}
         </div>
