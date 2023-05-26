@@ -1,11 +1,40 @@
 .colaborador {
+  display: flex;
+  flex-direction: column;
+
   width: 280px;
+
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .colaborador .cabecalho {
+  position: relative;
   background-color: #f0f0f0;
   border-radius: 10px 10px 0px 0px;
 }
+
+.colaborador .cabecalho .botao-deletar {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  color: var(--cor-primaria);
+
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.colaborador .cabecalho .botao-deletar:hover {
+  color: var(--cor-pressionado);
+}
+
+.colaborador .cabecalho .botao-deletar:active {
+  top: 17px;
+  right: 17px;
+
+  font-size: 24px;
+}
+
 .colaborador img {
   width: 100px;
   border-radius: 50%;
@@ -14,11 +43,17 @@
 }
 
 .colaborador .rodape {
-  background: #ffffff;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
-  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  flex-direction: column;
+
+  flex-grow: 1;
+
   padding-top: 90px;
   padding-bottom: 40px;
+
+  background: #ffffff;
+
+  border-radius: 0px 0px 10px 10px;
 }
 
 .colaborador .rodape h4 {
@@ -34,4 +69,18 @@
   line-height: 22px;
   color: #212121;
   padding: 0 16px;
+}
+
+.colaborador .rodape .favoritar {
+  justify-content: end;
+  cursor: pointer;
+  font-size: 26px;
+}
+
+.colaborador .rodape .favoritar:hover {
+  color: #ff0000;
+}
+
+.colaborador .rodape .favoritar:active {
+  font-size: 24px;
 }
