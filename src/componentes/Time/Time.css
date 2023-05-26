@@ -1,8 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap");
 
 .time {
+  position: relative;
+
   text-align: center;
   padding: 40px 32px;
+}
+
+.time .input-color {
+  position: absolute;
+  padding: 0;
+
+  right: 20px;
+  top: 20px;
+
+  height: 20px;
+  width: 40px;
+
+  border-radius: 5px;
+  border: none;
+
+  cursor: pointer;
+}
+
+.time .input-color::-webkit-color-swatch {
+  border-radius: 5px;
+  border: none;
+}
+
+.time .input-color::-webkit-color-swatch-wrapper {
+  padding: 0px;
+}
+
+.time .input-color::-moz-color-swatch {
+  border-radius: 5px;
+  border: none;
 }
 
 .time h3 {
