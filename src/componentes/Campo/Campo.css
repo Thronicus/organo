@@ -1,0 +1,52 @@
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0;
+}
+
+.campo label {
+  margin-bottom: 8px;
+
+  font-size: 24px;
+}
+
+.campo input {
+  box-sizing: border-box;
+  width: 100%;
+
+  padding: 24px;
+
+  font-size: 24px;
+  background-color: #ffffff;
+
+  border: none;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.campo-color input {
+  padding: 24px 2px;
+  height: 76px;
+  width: 76px;
+
+  padding: 0;
+
+  /*border-radius: 50%;*/
+  background-color: #ffffff;
+  border: none;
+
+  cursor: pointer;
+}
+
+.campo-color input::-webkit-color-swatch {
+  border-radius: 50%;
+  border: none;
+}
+
+.campo-color input::-webkit-color-swatch-wrapper {
+  padding: 8px; /* padding: 0px*/
+}
+
+.campo-color input::-moz-color-swatch {
+  border-radius: 5px;
+  border: none;
+}
